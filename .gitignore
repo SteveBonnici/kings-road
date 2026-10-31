@@ -1,3 +1,4 @@
 .admin-key
 node_modules/
 .wrangler/
+.mailer-secret
