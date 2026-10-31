@@ -18,7 +18,7 @@ export default {
     if (request.method === 'POST' && path === '/api/register') return handleRegister(request, env, ctx, cors);
     if (path === '/admin') return adminPage(url, env);
     if (path === '/admin/export.csv') return adminCsv(url, env);
-    return Response.redirect('https://stevebonnici.github.io/87-kings-road/', 302);
+    return Response.redirect('https://stevebonnici.github.io/kings-road/', 302);
   },
 };
 

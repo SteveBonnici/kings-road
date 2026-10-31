@@ -2,7 +2,7 @@
 
 Registration page for the 87 Kings Road, Panmure open home (Saturday 7 November 2026, 2:00-3:30pm).
 
-- Page: `index.html`, served by GitHub Pages at https://stevebonnici.github.io/87-kings-road/
+- Page: `index.html`, served by GitHub Pages at https://stevebonnici.github.io/kings-road/
 - Registrations: Cloudflare Worker `kings-road-viewing` (`worker/`), D1 database `kings-road-viewing`
 - Admin list + CSV: `https://kings-road-viewing.steve-b8b.workers.dev/admin?key=ADMIN_KEY` (key is a Worker secret, not in this repo)
 
