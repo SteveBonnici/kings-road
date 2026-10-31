@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kings-road-viewing",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": true,
+  "d1_databases": [
+    { "binding": "DB", "database_name": "kings-road-viewing", "database_id": "1cc14846-ce75-4c12-83e5-86b0c673cb4a" }
+  ],
+  "observability": { "enabled": true }
+}
