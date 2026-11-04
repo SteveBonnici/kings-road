@@ -71,24 +71,34 @@
   .note { color: var(--muted); font-size: 15px; margin: 0 0 18px; }
   .foot { margin-top: 32px; color: var(--muted); font-size: 14px; }
   .foot a { color: inherit; }
+  /* Let mode: <body class="let"> hides the open home + form and shows the let notice. Remove the class to reopen. */
+  body.let .open-only, body:not(.let) .let-only { display: none !important; }
+  .let-note { background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--accent); border-radius: 10px; padding: 20px 24px; margin: 28px 0; }
+  .let-note b { display: block; font: 500 22px/1.25 var(--display); margin-bottom: 6px; }
+  .let-note p { margin: 0; }
   @media (prefers-reduced-motion: no-preference) { .done { animation: fade .4s ease; } @keyframes fade { from { opacity: 0; transform: translateY(6px); } } }
 </style>
 </head>
-<body>
+<body class="let">
 <main class="wrap">
-  <p class="eyebrow">For rent · Panmure, Auckland</p>
+  <p class="eyebrow"><span class="open-only">For rent</span><span class="let-only">Now let</span> · Panmure, Auckland</p>
   <h1>Kings Road cottage</h1>
   <p class="lede">A freshly repainted, private two-bedroom cottage on a large section, behind a secure gate and surrounded by very large mature trees.</p>
 
   <a class="hero-link" href="#photos" data-open="0"><img class="hero" src="images/exterior.jpg" width="1600" height="1200" alt="The freshly painted cottage across a large lawn, surrounded by mature trees"><span>View all 13 photos</span></a>
 
-  <div class="when">
+  <div class="let-note let-only" role="status">
+    <b>This cottage has now been let</b>
+    <p>Thank you to everyone who registered. The open home on Saturday 7 November has been cancelled.</p>
+  </div>
+
+  <div class="when open-only">
     <span>Open home</span>
     <b>Saturday 7 November, 2:00–3:30pm</b>
     <span>Register below and we'll email you the full address.</span>
   </div>
 
-  <dl class="facts">
+  <dl class="facts open-only">
     <div><dt>Rent</dt><dd>$650 per week</dd></div>
     <div><dt>Available</dt><dd>7 November 2026</dd></div>
     <div><dt>Bedrooms</dt><dd>2</dd></div>
@@ -139,6 +149,7 @@
     </div>
   </section>
 
+  <div class="open-only">
   <h2 id="register">Register for the open home</h2>
   <p class="note">Leave your details and we'll email you an application form before the viewing. You can fill it in beforehand, or after you've seen the cottage.</p>
 
@@ -168,6 +179,7 @@
   </div>
 
   <p class="foot">Questions? Call or text Steve on <a href="tel:021932611">021 932 611</a>. Registering again with the same email address updates your details.</p>
+  </div>
   <dialog class="lb" id="lb" aria-label="Photo gallery">
     <figure><img id="lb-img" alt=""></figure>
     <figcaption id="lb-cap"></figcaption>

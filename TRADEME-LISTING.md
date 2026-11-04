@@ -92,6 +92,7 @@ Questions? Send us a message through Trade Me or call 021 932 611.
 ## To relist
 
 1. Update the rent, the available date and the open home date in the description above.
-2. On the page, change the open home date in `index.html`, and in `worker/src/index.js` change the admin subtitle. In `apps-script/Code.gs`, update the email text (the live copy is in the Apps Script project).
-3. Clear the old rows from the D1 `registrations` table, deploy the Worker, and push the page.
-4. On Trade Me, use "Sell similar" from the Unsold list, or start a new rental listing. Paste the fields and description, then upload the 13 photos in the order above.
+2. Reopen the page. In `index.html`, change `<body class="let">` to `<body>`. In `worker/wrangler.jsonc`, set `REGISTRATIONS_CLOSED` to `"0"`. Both were switched on 5 Nov 2026 when the cottage was let.
+3. On the page, change the open home date in `index.html`, and in `worker/src/index.js` change the admin subtitle. In `apps-script/Code.gs`, update the email text (the live copy is in the Apps Script project).
+4. Clear the old rows from the D1 `registrations` table, deploy the Worker, and push the page.
+5. On Trade Me, use "Sell similar" from the Unsold list, or start a new rental listing. Paste the fields and description, then upload the 13 photos in the order above.

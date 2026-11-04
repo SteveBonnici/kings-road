@@ -7,5 +7,6 @@
   "d1_databases": [
     { "binding": "DB", "database_name": "kings-road-viewing", "database_id": "1cc14846-ce75-4c12-83e5-86b0c673cb4a" }
   ],
+  "vars": { "REGISTRATIONS_CLOSED": "1" },
   "observability": { "enabled": true }
 }

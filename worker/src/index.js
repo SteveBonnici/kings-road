@@ -36,6 +36,8 @@ function json(obj, status, cors) {
 }
 
 async function handleRegister(request, env, ctx, cors) {
+  // REGISTRATIONS_CLOSED=1 in wrangler.jsonc vars: refuse new registrations and send nothing.
+  if (env.REGISTRATIONS_CLOSED === '1') return json({ ok: false, error: 'Sorry, this cottage has now been let and registrations are closed.' }, 410, cors);
   let b;
   try { b = await request.json(); } catch { return json({ ok: false, error: 'Bad request' }, 400, cors); }
   const first_name = String(b.first_name || '').trim().slice(0, 80);
